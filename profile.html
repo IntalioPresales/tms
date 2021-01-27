@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr" ng-app="app">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+  <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+  <meta name="author" content="PIXINVENT">
+  <title>talent Management System</title>
+  <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+  <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+
+    rel="stylesheet">
+  <!-- BEGIN VENDOR CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.css">
+  <!-- END VENDOR CSS-->
+  <!-- BEGIN MODERN CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+  <!-- END MODERN CSS-->
+  <!-- BEGIN Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-overlay-menu.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/cryptocoins/cryptocoins.css">
+  <!-- END Page Level CSS-->
+
+  <link rel="stylesheet" type="text/css" href="app-assets/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/css/custom-profile.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <style>
+    .review-header {
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      margin-bottom: 0;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .review-table tr {
+      background-color: #fff;
+    }
+
+    .review-section {
+      margin-bottom: 30px;
+    }
+
+    .review-header {
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      margin-bottom: 0;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .review-header h3 {
+      font-size: 1.4rem;
+      margin-bottom: 3px;
+    }
+
+    .review-header p {
+      margin-bottom: 0;
+    }
+
+    .review-table .form-control {
+      height: 36px;
+    }
+
+    .grade-span .badge {
+      border-radius: 3px;
+      display: inline-block;
+      font-size: 13px;
+      min-width: 75px;
+      padding: 4px 12px;
+      text-align: center;
+    }
+
+    .review-table .select2-container .select2-selection--single {
+      height: 36px;
+    }
+
+    .review-table .select2-container--default .select2-selection--single .select2-selection__rendered {
+      line-height: 34px;
+    }
+
+    .review-table .select2-container--default .select2-selection--single .select2-selection__arrow {
+      height: 34px;
+    }
+
+    .grade-span .badge {
+      border-radius: 3px;
+      display: inline-block;
+      font-size: 13px;
+      min-width: 75px;
+      padding: 4px 12px;
+      text-align: center;
+    }
+
+    .bg-inverse-danger {
+      background-color: rgba(242, 17, 54, 0.12) !important;
+      color: #e63c3c !important;
+    }
+
+    .bg-inverse-warning {
+      background-color: rgba(255, 152, 0, 0.12) !important;
+      color: #f39c12 !important;
+    }
+
+    .bg-inverse-info {
+      background-color: rgba(2, 182, 179, 0.12) !important;
+      color: #1db9aa !important;
+    }
+
+    .bg-inverse-purple {
+      background: rgba(108, 97, 246, .2) !important;
+      color: #6c61f6 !important;
+    }
+
+    .bg-inverse-success {
+      background-color: rgba(15, 183, 107, 0.12) !important;
+      color: #26af48 !important;
+    }
+  </style>
+</head>
+
+<body ng-controller="ctrl" class="vertical-layout vertical-overlay-menu 2-columns   menu-expanded fixed-navbar"
+  data-open="click" data-menu="vertical-overlay-menu" data-col="2-columns">
+
+  <!-- Main header -->
+  <div ng-include="'./components/header.html'"></div>
+  <!-- /Main header -->
+
+  <!-- Main menu -->
+  <div ng-include="'./components/menu.html'"></div>
+  <!-- /Main menu -->
+
+
+
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+  <div class="app-content content">
+    <div class="content-wrapper">
+
+      <!-- BREADCRUMB -->
+      <div class="content-header row">
+        <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+          <h3 class="content-header-title mb-0 d-inline-block">Profile</h3>
+          <div class="row breadcrumbs-top d-inline-block">
+            <div class="breadcrumb-wrapper col-12">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Profile </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="content-header-right col-md-6 col-12">
+          <div class="btn-group float-md-right">
+            <button class="btn btn-info dropdown-toggle mb-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+            <div class="dropdown-menu arrow"><a class="dropdown-item" href="#"><i class="fa fa-calendar-check mr-1"></i> Calender</a><a class="dropdown-item" href="#"><i class="fa fa-cart-plus mr-1"></i> Cart</a><a class="dropdown-item" href="#"><i class="fa fa-life-ring mr-1"></i> Support</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-cog mr-1"></i> Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / BREADCRUMB -->
+
+      <div class="content-body">
+
+        <div class="es">
+
+          <div class="card mb-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="profile-view">
+                    <div class="profile-img-wrap">
+                      <div class="profile-img">
+                        <a href="#"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-02.jpg"></a>
+                      </div>
+                    </div>
+                    <div class="profile-basic">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="profile-info-left">
+                            <h3 class="user-name m-t-0 mb-0">John Doe</h3>
+                            <h6 class="text-muted">UI/UX Design Team</h6>
+                            <small class="text-muted">Web Designer</small>
+                            <div class="staff-id">Employee ID : FT-0001</div>
+                            <div class="small doj text-muted">Date of Join : 1st Jan 2013</div>
+                            <div class="staff-msg"><a class="btn btn-custom" href="chat.html">Send Message</a></div>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <ul class="personal-info">
+                            <li>
+                              <div class="title">Phone:</div>
+                              <div class="text"><a href="">9876543210</a></div>
+                            </li>
+                            <li>
+                              <div class="title">Email:</div>
+                              <div class="text"><a href="">johndoe@example.com</a></div>
+                            </li>
+                            <li>
+                              <div class="title">Birthday:</div>
+                              <div class="text">24th July</div>
+                            </li>
+                            <li>
+                              <div class="title">Address:</div>
+                              <div class="text">1861 Bayonne Ave, Manchester Township,</div>
+                            </li>
+                            <li>
+                              <div class="title">Gender:</div>
+                              <div class="text">Male</div>
+                            </li>
+                            <li>
+                              <div class="title">Reports to:</div>
+                              <div class="text">
+                                <div class="avatar-box">
+                                  <div class="avatar avatar-xs">
+                                    <img src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-16.jpg" alt="">
+                                  </div>
+                                </div>
+                                <a href="profile.html">
+                                  Jeffery Lalor
+                                </a>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pro-edit"><a data-target="#profile_info" data-toggle="modal" class="edit-icon" href="#"><i style="padding-top: 3px; font-size: 16px;" class="la la-edit"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card tab-box">
+            <div class="row user-tabs">
+              <div class="col-lg-12 col-md-12 col-sm-12 line-tabs">
+                <ul class="nav nav-tabs nav-tabs-bottom">
+                  <li class="nav-item"><a href="#emp_profile" data-toggle="tab" class="nav-link active">Profile</a></li>
+                  <li class="nav-item"><a href="#emp_projects" data-toggle="tab" class="nav-link">Projects</a></li>
+                  <li class="nav-item"><a href="#performance" data-toggle="tab" class="nav-link">Performance Review</a></li>
+                  <li class="nav-item"><a href="#" data-toggle="tab" class="nav-link">Training</a></li>
+                  <li class="nav-item"><a href="#" data-toggle="tab" class="nav-link">Timeoff</a></li>
+                  <li class="nav-item"><a href="#" data-toggle="tab" class="nav-link">Settings</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab-content">
+
+            <!-- Profile Info Tab -->
+            <div id="emp_profile" class="pro-overview tab-pane fade active show">
+
+              <div class="row card-icons">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                            <div class="media d-flex p-2">
+                              <div class="align-self-center">
+                                <i class="icon-camera font-large-1 blue-grey d-block mb-1"></i>
+                                <span class="text-muted text-right">Java, REST API</span>
+                              </div>
+                              <div class="media-body text-right">
+                                <span class="font-large-2 text-bold-300 info">8.5/10</span>
+                              </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                            <div class="media d-flex p-2">
+                              <div class="align-self-center">
+                                <i class="icon-user font-large-1 blue-grey d-block mb-1"></i>
+                                <span class="text-muted text-right">.NET, MVC</span>
+                              </div>
+                              <div class="media-body text-right">
+                                <span class="font-large-2 text-bold-300 danger">8.5/10</span>
+                              </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                              <div class="progress-bar bg-danger" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                            <div class="media d-flex p-2">
+                              <div class="align-self-center">
+                                <i class="icon-bulb font-large-1 blue-grey d-block mb-1"></i>
+                                <span class="text-muted text-right">Html5, Css3</span>
+                              </div>
+                              <div class="media-body text-right">
+                                <span class="font-large-2 text-bold-300 success">5.5/10</span>
+                              </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="media d-flex p-2">
+                              <div class="align-self-center">
+                                <i class="icon-wallet font-large-1 blue-grey d-block mb-1"></i>
+                                <span class="text-muted text-right">Amazon Web Services </span>
+                              </div>
+                              <div class="media-body text-right">
+                                <span class="font-large-2 text-bold-300 warning">6.0/10</span>
+                              </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-6 d-flex">
+                  <div class="card profile-box flex-fill">
+                    <div class="card-body">
+                      <h3 class="card-title">Personal Informations <a href="#" class="edit-icon" data-toggle="modal" data-target="#personal_info_modal"><i class="la la-pencil"></i></a></h3>
+                      <ul class="personal-info">
+                        <li>
+                          <div class="title">Passport No.</div>
+                          <div class="text">9876543210</div>
+                        </li>
+                        <li>
+                          <div class="title">Years of exp</div>
+                          <div class="text">8</div>
+                        </li>
+                        <li>
+                          <div class="title">employement period</div>
+                          <div class="text">2 Years</div>
+                        </li>
+                        <li>
+                          <div class="title">Tel</div>
+                          <div class="text"><a href="">9876543210</a></div>
+                        </li>
+                        <li>
+                          <div class="title">Nationality</div>
+                          <div class="text">Indian</div>
+                        </li>
+                        <li>
+                          <div class="title">Religion</div>
+                          <div class="text">Christian</div>
+                        </li>
+                        <li>
+                          <div class="title">Marital status</div>
+                          <div class="text">Married</div>
+                        </li>
+                        <li>
+                          <div class="title">No. of children</div>
+                          <div class="text">2</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-flex">
+                  <div class="card profile-box flex-fill">
+                    <div class="card-body">
+                      <h3 class="card-title">Emergency Contact <a href="#" class="edit-icon" data-toggle="modal" data-target="#emergency_contact_modal"><i class="la la-pencil"></i></a></h3>
+                      <h5 class="section-title text-muted">Primary</h5>
+                      <ul class="personal-info">
+                        <li>
+                          <div class="title">Name</div>
+                          <div class="text">John Doe</div>
+                        </li>
+                        <li>
+                          <div class="title">Relationship</div>
+                          <div class="text">Father</div>
+                        </li>
+                        <li>
+                          <div class="title">Phone </div>
+                          <div class="text">9876543210, 9876543210</div>
+                        </li>
+                      </ul>
+                      <hr>
+                      <h5 class="section-title text-muted">Secondary</h5>
+                      <ul class="personal-info">
+                        <li>
+                          <div class="title">Name</div>
+                          <div class="text">Karen Wills</div>
+                        </li>
+                        <li>
+                          <div class="title">Relationship</div>
+                          <div class="text">Brother</div>
+                        </li>
+                        <li>
+                          <div class="title">Phone </div>
+                          <div class="text">9876543210, 9876543210</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 d-flex">
+                  <div class="card profile-box flex-fill">
+                    <div class="card-body">
+                      <h3 class="card-title">Education Informations <a href="#" class="edit-icon" data-toggle="modal" data-target="#education_info"><i class="la la-pencil"></i></a></h3>
+                      <div class="experience-box">
+                        <ul class="experience-list">
+                          <li>
+                            <div class="experience-user">
+                              <div class="before-circle"></div>
+                            </div>
+                            <div class="experience-content">
+                              <div class="timeline-content">
+                                <a href="#/" class="name">International College of Arts and Science (UG)</a>
+                                <div>Bsc Computer Science</div>
+                                <span class="time">2000 - 2003</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="experience-user">
+                              <div class="before-circle"></div>
+                            </div>
+                            <div class="experience-content">
+                              <div class="timeline-content">
+                                <a href="#/" class="name">International College of Arts and Science (PG)</a>
+                                <div>Msc Computer Science</div>
+                                <span class="time">2000 - 2003</span>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex">
+                  <div class="card profile-box flex-fill">
+                    <div class="card-body">
+                      <h3 class="card-title">Experience <a href="#" class="edit-icon" data-toggle="modal" data-target="#experience_info"><i class="la la-pencil"></i></a></h3>
+                      <div class="experience-box">
+                        <ul class="experience-list">
+                          <li>
+                            <div class="experience-user">
+                              <div class="before-circle"></div>
+                            </div>
+                            <div class="experience-content">
+                              <div class="timeline-content">
+                                <a href="#/" class="name">Web Designer at Zen Corporation</a>
+                                <span class="time">Jan 2013 - Present (5 years 2 months)</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="experience-user">
+                              <div class="before-circle"></div>
+                            </div>
+                            <div class="experience-content">
+                              <div class="timeline-content">
+                                <a href="#/" class="name">Web Designer at Ron-tech</a>
+                                <span class="time">Jan 2013 - Present (5 years 2 months)</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="experience-user">
+                              <div class="before-circle"></div>
+                            </div>
+                            <div class="experience-content">
+                              <div class="timeline-content">
+                                <a href="#/" class="name">Web Designer at Dalt Technology</a>
+                                <span class="time">Jan 2013 - Present (5 years 2 months)</span>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 d-flex">
+                  <div class="card profile-box flex-fill">
+                    <div class="card-body">
+                      <h3 class="card-title">Bank information</h3>
+                      <ul class="personal-info">
+                        <li>
+                          <div class="title">Bank name</div>
+                          <div class="text">ICICI Bank</div>
+                        </li>
+                        <li>
+                          <div class="title">Bank account No.</div>
+                          <div class="text">159843014641</div>
+                        </li>
+                        <li>
+                          <div class="title">IFSC Code</div>
+                          <div class="text">ICI24504</div>
+                        </li>
+                        <li>
+                          <div class="title">PAN No</div>
+                          <div class="text">TC000Y56</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex">
+                  <div class="card profile-box flex-fill">
+                    <div class="card-body">
+                      <h3 class="card-title">Family Informations <a href="#" class="edit-icon" data-toggle="modal" data-target="#family_info_modal"><i class="la la-pencil"></i></a></h3>
+                      <div class="table-responsive">
+                        <table class="table table-nowrap">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Relationship</th>
+                              <th>Date of Birth</th>
+                              <th>Phone</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Leo</td>
+                              <td>Brother</td>
+                              <td>Feb 16th, 2019</td>
+                              <td>9876543210</td>
+                              <td class="text-right">
+                                <div class="dropdown dropdown-action">
+                                  <a aria-expanded="false" data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="la la-ellipsis-v"></i></a>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item"><i class="la la-pencil m-r-5"></i> Edit</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-trash m-r-5"></i> Delete</a>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- /Profile Info Tab -->
+
+            <!-- Projects Tab -->
+            <div class="tab-pane fade" id="emp_projects">
+              <div class="row">
+                <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3 pr-0">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="dropdown profile-action">
+                        <a aria-expanded="false" data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="la la-ellipsis-v"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a data-target="#edit_project" data-toggle="modal" href="#" class="dropdown-item"><i class="la la-pencil m-r-5"></i> Edit</a>
+                          <a data-target="#delete_project" data-toggle="modal" href="#" class="dropdown-item"><i class="fa fa-trash m-r-5"></i> View</a>
+                        </div>
+                      </div>
+                      <h4 class="project-title"><a href="project-view.html">Office Management</a></h4>
+                      <small class="block text-ellipsis m-b-15 flex flex-center">
+                        <span class="text-xs"><i style="font-size: 16px;" class="la la-clock-o"></i></span> <span class="text-muted">02-09-2019 </span>
+                      </small>
+                      <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. When an unknown printer took a galley of type and
+                        scrambled it...
+                      </p>
+                      <div class="pro-deadline m-b-15">
+                        <div class="sub-title">
+                          Technical Tags:
+                        </div>
+                        <div class="text-muted mt-xxs">
+                          <button type="button" class="btn btn-sm btn-outline-info round">Java</button>
+                          <button type="button" class="btn btn-sm btn-outline-info round">Html5</button>
+                          <button type="button" class="btn btn-sm btn-outline-info round">Css3</button>
+                        </div>
+                      </div>
+
+                      <div class="pro-deadline m-b-15">
+                        <div class="sub-title">
+                          Deadline:
+                        </div>
+                        <div class="text-muted">
+                          17 Apr 2019
+                        </div>
+                      </div>
+                      <div class="project-members m-b-15">
+                        <div class="sub-title">Project Leader :</div>
+                        <ul class="team-members">
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Jeffery Lalor"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-16.jpg"></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="project-members m-b-15">
+                        <div>Team :</div>
+                        <ul class="team-members">
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="John Doe"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-02.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Richard Miles"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-09.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="John Smith"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-10.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Mike Litorus"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-05.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="all-users">+15</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="m-b-5">Duration <span class="text-success float-right">40%</span></p>
+                      <div class="progress progress-xs mb-0">
+                        <div style="width: 40%" title="" data-toggle="tooltip" role="progressbar" class="progress-bar bg-success" data-original-title="40%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3 pr-0">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="dropdown profile-action">
+                        <a aria-expanded="false" data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="la la-ellipsis-v"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a data-target="#edit_project" data-toggle="modal" href="#" class="dropdown-item"><i class="la la-pencil m-r-5"></i> Edit</a>
+                          <a data-target="#delete_project" data-toggle="modal" href="#" class="dropdown-item"><i class="fa fa-trash-o m-r-5"></i> View</a>
+                        </div>
+                      </div>
+                      <h4 class="project-title"><a href="project-view.html">Project Management</a></h4>
+                      <small class="block text-ellipsis m-b-15 flex flex-center">
+                        <span class="text-xs"><i style="font-size: 16px;" class="la la-clock-o"></i></span> <span class="text-muted">06-10-2020 </span>
+                      </small>
+                      <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. When an unknown printer took a galley of type and
+                        scrambled it...
+                      </p>
+                      <div class="pro-deadline m-b-15">
+                        <div class="sub-title">
+                          Technical Tags:
+                        </div>
+                        <div class="text-muted mt-xxs">
+                          <button type="button" class="btn btn-sm btn-outline-info round">AWS</button>
+                          <button type="button" class="btn btn-sm btn-outline-info round">Nodejs</button>
+                          <button type="button" class="btn btn-sm btn-outline-info round">Mysql</button>
+                        </div>
+                      </div>
+                      <div class="pro-deadline m-b-15">
+                        <div class="sub-title">
+                          Deadline:
+                        </div>
+                        <div class="text-muted">
+                          17 Apr 2019
+                        </div>
+                      </div>
+                      <div class="project-members m-b-15">
+                        <div class="sub-title">Project Leader :</div>
+                        <ul class="team-members">
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Jeffery Lalor"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-16.jpg"></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="project-members m-b-15">
+                        <div>Team :</div>
+                        <ul class="team-members">
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="John Doe"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-02.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Richard Miles"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-09.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="John Smith"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-10.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Mike Litorus"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-05.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="all-users">+15</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="m-b-5">Duration <span class="text-success float-right">40%</span></p>
+                      <div class="progress progress-xs mb-0">
+                        <div style="width: 40%" title="" data-toggle="tooltip" role="progressbar" class="progress-bar bg-success" data-original-title="40%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="dropdown profile-action">
+                        <a aria-expanded="false" data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="la la-ellipsis-v"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a data-target="#edit_project" data-toggle="modal" href="#" class="dropdown-item"><i class="la la-pencil m-r-5"></i> Edit</a>
+                          <a data-target="#delete_project" data-toggle="modal" href="#" class="dropdown-item"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                        </div>
+                      </div>
+                      <h4 class="project-title"><a href="project-view.html">Video Calling App</a></h4>
+                      <small class="block text-ellipsis m-b-15 flex flex-center">
+                        <span class="text-xs"><i style="font-size: 16px;" class="la la-clock-o"></i></span> <span class="text-muted">04-05-2019 </span>
+                      </small>
+                      <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. When an unknown printer took a galley of type and
+                        scrambled it...
+                      </p>
+                      <div class="pro-deadline m-b-15">
+                        <div class="sub-title">
+                          Technical Tags:
+                        </div>
+                        <div class="text-muted mt-xxs">
+                          <button type="button" class="btn btn-sm btn-outline-info round">.NET</button>
+                          <button type="button" class="btn btn-sm btn-outline-info round">MVC</button>
+                          <button type="button" class="btn btn-sm btn-outline-info round">Html5</button>
+                        </div>
+                      </div>
+                      <div class="pro-deadline m-b-15">
+                        <div class="sub-title">
+                          Deadline:
+                        </div>
+                        <div class="text-muted">
+                          17 Apr 2019
+                        </div>
+                      </div>
+                      <div class="project-members m-b-15">
+                        <div class="sub-title">Project Leader :</div>
+                        <ul class="team-members">
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Jeffery Lalor"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-16.jpg"></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="project-members m-b-15">
+                        <div>Team :</div>
+                        <ul class="team-members">
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="John Doe"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-02.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Richard Miles"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-09.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="John Smith"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-10.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" data-toggle="tooltip" title="" data-original-title="Mike Litorus"><img alt="" src="https://dreamguys.co.in/smarthr/light/assets/img/profiles/avatar-05.jpg"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="all-users">+15</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="m-b-5">Duration <span class="text-success float-right">40%</span></p>
+                      <div class="progress progress-xs mb-0">
+                        <div style="width: 40%" title="" data-toggle="tooltip" role="progressbar" class="progress-bar bg-success" data-original-title="40%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- /Projects Tab -->
+
+            <!-- PERFORMANCE Tab -->
+            <div class="tab-pane fade" id="performance">
+              <section class="review-section professional-excellence">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Professional Excellence</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered review-table mb-0">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>Key Result Area</th>
+                            <th>Key Performance Indicators</th>
+                            <th>Weightage</th>
+                            <th>Percentage achieved <br>( self Score )</th>
+                            <th>Points Scored <br>( self )</th>
+                            <th>Percentage achieved <br>( RO's Score )</th>
+                            <th>Points Scored <br>( RO )</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td rowspan="2">1</td>
+                            <td rowspan="2">Production</td>
+                            <td>Quality</td>
+                            <td><input type="text" class="form-control" readonly="" value="30"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>TAT (turn around time)</td>
+                            <td><input type="text" class="form-control" readonly="" value="30"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Process Improvement</td>
+                            <td>PMS,New Ideas</td>
+                            <td><input type="text" class="form-control" readonly="" value="10"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Team Management</td>
+                            <td>Team Productivity,dynaics,attendance,attrition</td>
+                            <td><input type="text" class="form-control" readonly="" value="5"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Knowledge Sharing</td>
+                            <td>Sharing the knowledge for team productivity </td>
+                            <td><input type="text" class="form-control" readonly="" value="5"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Reporting and Communication</td>
+                            <td>Emails/Calls/Reports and Other Communication</td>
+                            <td><input type="text" class="form-control" readonly="" value="5"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" class="text-center">Total </td>
+                            <td><input type="text" class="form-control" readonly="" value="85"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="review-section personal-excellence">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Personal Excellence</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered review-table mb-0">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>Personal Attributes</th>
+                            <th>Key Indicators</th>
+                            <th>Weightage</th>
+                            <th>Percentage achieved <br>( self Score )</th>
+                            <th>Points Scored <br>( self )</th>
+                            <th>Percentage achieved <br>( RO's Score )</th>
+                            <th>Points Scored <br>( RO )</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td rowspan="2">1</td>
+                            <td rowspan="2">Attendance</td>
+                            <td>Planned or Unplanned Leaves</td>
+                            <td><input type="text" class="form-control" readonly="" value="2"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>Time Consciousness</td>
+                            <td><input type="text" class="form-control" readonly="" value="2"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td rowspan="2">2</td>
+                            <td rowspan="2">Attitude &amp; Behavior</td>
+                            <td>Team Collaboration</td>
+                            <td><input type="text" class="form-control" readonly="" value="2"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>Professionalism &amp; Responsiveness</td>
+                            <td><input type="text" class="form-control" readonly="" value="2"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Policy &amp; Procedures </td>
+                            <td>Adherence to policies and procedures</td>
+                            <td><input type="text" class="form-control" readonly="" value="2"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Initiatives</td>
+                            <td>Special Efforts, Suggestions,Ideas,etc.</td>
+                            <td><input type="text" class="form-control" readonly="" value="2"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Continuous Skill Improvement</td>
+                            <td>Preparedness to move to next level &amp; Training utilization</td>
+                            <td><input type="text" class="form-control" readonly="" value="3"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" class="text-center">Total </td>
+                            <td><input type="text" class="form-control" readonly="" value="15"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                            <td><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" class="text-center"><b>Total Percentage(%)</b></td>
+                            <td colspan="5" class="text-center"><input type="text" class="form-control" readonly="" value="0"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="8" class="text-center">
+                              <div class="grade-span">
+                                <h4>Grade</h4>
+                                <span class="badge bg-inverse-danger">Below 65 Poor</span>
+                                <span class="badge bg-inverse-warning">65-74 Average</span>
+                                <span class="badge bg-inverse-info">75-84 Satisfactory</span>
+                                <span class="badge bg-inverse-purple">85-92 Good</span>
+                                <span class="badge bg-inverse-success">Above 92 Excellent</span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Special Initiatives, Achievements, contributions if any</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-review review-table mb-0" id="table_achievements">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>By Self</th>
+                            <th>RO's Comment</th>
+                            <th>HOD's Comment</th>
+                            <th style="width: 64px;"><button type="button" class="btn btn-primary btn-add-row"><i class="fa fa-plus"></i></button></th>
+                          </tr>
+                        </thead>
+                        <tbody id="table_achievements_tbody">
+                          <tr>
+                            <td>1</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><button type="button" class="btn btn-danger" id="comments_remove"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Comments on the role</h3>
+                  <p class="text-muted">alterations if any requirred like addition/deletion of responsibilities</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered review-table mb-0">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>Strengths</th>
+                            <th>Area's for Improvement</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Personal Goals</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered review-table mb-0">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>Goal Achieved during last year</th>
+                            <th>Goal set for current year</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section" data-select2-id="45">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Personal Updates</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered review-table mb-0">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>Last Year</th>
+                            <th>Yes/No</th>
+                            <th>Details</th>
+                            <th>Current Year</th>
+                            <th>Yes/No</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Married/Engaged?</td>
+                            <td>
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="3">Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-p4b2-container"><span class="select2-selection__rendered" id="select2-p4b2-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>	
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                            <td>Marriage Plans</td>
+                            <td>
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="4" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="6">Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-wqtc-container"><span class="select2-selection__rendered" id="select2-wqtc-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Higher Studies/Certifications?</td>
+                            <td>
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="7" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="9">Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="8" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-uly5-container"><span class="select2-selection__rendered" id="select2-uly5-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                            <td>Plans For Higher Study</td>
+                            <td>
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="10" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="12">Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="11" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-z74x-container"><span class="select2-selection__rendered" id="select2-z74x-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Health Issues?</td>
+                            <td data-select2-id="44">
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="13" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="15">Select</option>
+                                <option data-select2-id="47">Yes</option>
+                                <option data-select2-id="48">No</option>
+                              </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="14" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-2bt5-container"><span class="select2-selection__rendered" id="select2-2bt5-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                            <td>Certification Plans</td>
+                            <td>
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="16" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="18">Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="17" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-h3x6-container"><span class="select2-selection__rendered" id="select2-h3x6-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Others</td>
+                            <td>
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="19" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="21">Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="20" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-57rd-container"><span class="select2-selection__rendered" id="select2-57rd-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                            <td>Others</td>
+                            <td>
+                              <select class="form-control select select2-hidden-accessible" data-select2-id="22" tabindex="-1" aria-hidden="true">
+                                <option data-select2-id="24">Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="23" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cezf-container"><span class="select2-selection__rendered" id="select2-cezf-container" role="textbox" aria-readonly="true" title="Select">Select</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Professional Goals Achieved for last year</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-review review-table mb-0" id="table_goals">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>By Self</th>
+                            <th>RO's Comment</th>
+                            <th>HOD's Comment</th>
+                            <th style="width: 64px;"><button type="button" class="btn btn-primary btn-add-row"><i class="fa fa-plus"></i></button></th>
+                          </tr>
+                        </thead>
+                        <tbody id="table_goals_tbody">
+                          <tr>
+                            <td>1</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Professional Goals for the forthcoming year</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-review review-table mb-0" id="table_forthcoming">
+                        <thead>
+                          <tr>
+                            <th style="width:40px;">#</th>
+                            <th>By Self</th>
+                            <th>RO's Comment</th>
+                            <th>HOD's Comment</th>
+                            <th style="width: 64px;"><button type="button" class="btn btn-primary btn-add-row"><i class="fa fa-plus"></i></button></th>
+                          </tr>
+                        </thead>
+                        <tbody id="table_forthcoming_tbody">
+                          <tr>
+                            <td>1</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Training Requirements</h3>
+                  <p class="text-muted">if any to achieve the Performance Standard Targets completely</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-review review-table mb-0" id="table_targets">
+                        <thead>
+                          <tr>
+                          <th style="width:40px;">#</th>
+                          <th>By Self</th>
+                          <th>RO's Comment</th>
+                          <th>HOD's Comment</th>
+                          <th style="width: 64px;"><button type="button" class="btn btn-primary btn-add-row"><i class="fa fa-plus"></i></button></th>
+                          </tr>
+                        </thead>
+                        <tbody id="table_targets_tbody">
+                          <tr>
+                            <td>1</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="review-section">
+                <div class="review-header text-center">
+                  <h3 class="review-title">Any other general comments, observations, suggestions etc.</h3>
+                  <p class="text-muted">Lorem ipsum dollar</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-review review-table mb-0" id="general_comments">
+                        <thead>
+                          <tr>
+                          <th style="width:40px;">#</th>
+                          <th>Self</th>
+                          <th>RO</th>
+                          <th>HOD</th>
+                          <th style="width: 64px;"><button type="button" class="btn btn-primary btn-add-row"><i class="fa fa-plus"></i></button></th>
+                          </tr>
+                        </thead>
+                        <tbody id="general_comments_tbody">
+                          <tr>
+                            <td>1</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+            <!-- / PERFORMANCE Tab -->
+
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+  <!-- Footer -->
+  <div ng-include="'./components/footer.html'"></div>
+  <!-- / Footer -->
+
+  <!-- BEGIN VENDOR JS-->
+  <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <!-- BEGIN VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <script src="app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+  <script src="app-assets/vendors/js/charts/echarts/echarts.js" type="text/javascript"></script>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN MODERN JS-->
+  <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
+  <script src="app-assets/js/core/app.js" type="text/javascript"></script>
+  <script src="app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+  <!-- END MODERN JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  <script src="app-assets/js/scripts/pages/dashboard-crypto.js" type="text/javascript"></script>
+  <!-- END PAGE LEVEL JS-->
+
+  <script>
+
+
+    var app = angular.module("app", []);
+    app.controller("ctrl", function ($scope) { });
+
+  </script>
+
+</body>
+
+</html>

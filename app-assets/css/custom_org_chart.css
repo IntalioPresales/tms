@@ -1,0 +1,117 @@
+#chart-container {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 24px);
+    border: 2px dashed #aaa;
+    border-radius: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+.orgchart .node .stats {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 4px;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.orgchart .node .stats div {
+    font-size: 12px;
+    font-weight: 600;
+    color: #556166;
+    display: flex;
+    align-items: center;
+}
+
+.orgchart .node .stats div:last-child i {
+    color: #dca883;
+}
+.orgchart .node .stats i {
+    color: #8a8f92;
+    font-size: 16px!important;
+    font-weight: 500;
+}
+
+.orgchart .node .details {
+    padding-left: 5px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.orgchart .node .img {
+    height: 75px;
+}
+
+.orgchart .node .name {
+    font-weight: 600;
+    color: #222222;
+    margin-top: 4px;
+    text-transform: capitalize;
+}
+
+.orgchart .node .position {
+    text-align: left;
+    margin-top: 3px;
+    color: #969696;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.orgchart .node .title {
+    font-size: 12px !important;
+
+}
+
+.orgchart .node {
+    width: 250px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 1px 9px #cbcbcb;
+    padding: 0;
+    border: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.orgchart .node .title {
+    width: unset;
+    height: unset;
+    padding: 8px 12px;
+    /* background-color: rgb(49, 149, 197); */
+    background-color: #607D8B !important;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px !important;
+}
+
+.orgchart .oci {
+    display: none;
+}
+
+.orgchart .node .content {
+    border: none;
+    font-size: 13px;
+    height: 100%;
+    min-height: 20px;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /* background: #d6e7fb; */
+    color: #1f1e1e;
+    cursor: pointer;
+}
+
+.orgchart .node .note {
+    min-height: 20px;
+    background-color: #fff;
+    font-size: 13px;
+    padding: 3px 0px;
+}
+
+.orgchart {
+    background-image: none;
+}

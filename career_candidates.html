@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr" ng-app="app">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+  <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+  <meta name="author" content="PIXINVENT">
+  <title> talent Management System</title>
+  <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+  <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+    rel="stylesheet">
+  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+    rel="stylesheet">
+  <!-- BEGIN VENDOR CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.css">
+  <!-- END VENDOR CSS-->
+  <!-- BEGIN MODERN CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+  <!-- END MODERN CSS-->
+  <!-- BEGIN Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-overlay-menu.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/cryptocoins/cryptocoins.css">
+  <!-- END Page Level CSS-->
+
+  <link rel="stylesheet" type="text/css" href="app-assets/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/css/custom_career_candidates.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <style>
+    .avatar {
+      width: 38px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body ng-controller="ctrl" class="vertical-layout vertical-overlay-menu 2-columns   menu-expanded fixed-navbar"
+  data-open="click" data-menu="vertical-overlay-menu" data-col="2-columns">
+
+  <!-- fixed-top-->
+
+  <!-- Main navbar -->
+  <div ng-include="'./components/header.html'"></div>
+  <!-- /Main navbar -->
+
+
+  <!-- Main navbar -->
+  <div ng-include="'./components/menu.html'"></div>
+  <!-- /Main navbar -->
+
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+  <div class="app-content content">
+    <div class="content-wrapper pl-1">
+
+      <!-- BREADCRUMB -->
+      <div class="content-header row">
+        <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+          <h3 class="content-header-title mb-0 d-inline-block">Candidates</h3>
+          <div class="row breadcrumbs-top d-inline-block">
+            <div class="breadcrumb-wrapper col-12">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">List </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="content-header-right col-md-6 col-12">
+          <div class="btn-group float-md-right">
+            <button class="btn btn-info mb-1 mr-1" type="button">New Candidate</button>
+            <button class="btn btn-info mb-1 mr-1" type="button">Search</button>
+            <button class="btn btn-info mb-1 mr-1 " type="button" ><a class="text-white" href="job_description.html">View Job</a></button>
+
+            <!-- <button class="btn btn-info dropdown-toggle mb-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+            <div class="dropdown-menu arrow"><a class="dropdown-item" href="#"><i class="fa fa-calendar-check mr-1"></i> Calender</a><a class="dropdown-item" href="#"><i class="fa fa-cart-plus mr-1"></i> Cart</a><a class="dropdown-item" href="#"><i class="fa fa-life-ring mr-1"></i> Support</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-cog mr-1"></i> Settings</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- / BREADCRUMB -->
+
+      <div class="content-body">
+
+
+        <div class="row m-0">
+
+          <!-- CARD -->
+          <div class="e_card_box">
+
+            <div class="cc">
+              <div class="dropdown">
+                <i class="la la-ellipsis-v e_card_menu_1" id="btnSearchDrop1" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false"></i>
+
+                <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right" style="width: 190px;">
+                  <a href="#" class="dropdown-item"><i class="la la-map-pin"></i> Pin</a>
+                  <a href="#" class="dropdown-item"><i class="la la-edit"></i> Edit </a>
+                  <a href="#" class="dropdown-item"><i class="la la-book"></i> View CV </a>
+                  <a href="#" class="dropdown-item"><i class="la la-download"></i> Download CV </a>
+                  <a href="#" class="dropdown-item"><i class="la la-calendar"></i> Schedule Interview</a>
+                  <a href="#" class="dropdown-item"><i class="la la-times"></i>Reject</a>
+                </span>
+              </div>
+
+              <div class="e_card">
+                <div class="additional">
+                  <div class="user-card">
+
+                    <div class="level center">
+                      Level 0
+                    </div>
+                    <div class="points center">
+                      New
+                    </div>
+                    <img src="app-assets/images/avatar/2.jpg" width="70" height="70" class="center ava-img">
+
+                  </div>
+                  <div class="more-info">
+                    <h1>Jareth Holmes</h1>
+                    <div class="coords">
+                      <span>Intalio</span>
+                      <span>Applied 02 January 2019</span>
+                    </div>
+                    <div class="coords">
+                      <span>Senior Developer</span>
+                      <span>Beirut, Lebanon</span>
+                    </div>
+                    <div class="stats">
+                      <div>
+                        <div class="title">Age</div>
+                        <i class="fa fa-gamepad"></i>
+                        <div class="value">24</div>
+                      </div>
+                      <div>
+                        <div class="title">Exp. years</div>
+                        <i class="fa fa-trophy"></i>
+                        <div class="value">4</div>
+                      </div>
+                      <div>
+                        <div class="title">Interviews</div>
+                        <i class="fa fa-group"></i>
+                        <div class="value">0</div>
+                      </div>
+                      <div>
+                        <div class="title">Skills</div>
+                        <i class="fa fa-coffee"></i>
+                        <div class="value ">3</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="general">
+                  <h1>Jareth Holmes</h1>
+                  <div class="matching">Matching <span class="danger">67%</span></div>
+                  <div class="insights">
+                    <div> <span class="">.NET Core </span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 91%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="insights mt-1">
+                    <div> <span class="">Javascript</span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="insights mt-1">
+                    <div> <span class="">Html</span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- / CARD -->
+
+          <!-- CARD -->
+          <div class="e_card_box">
+
+            <div class="cc">
+              <div class="dropdown">
+                <i class="la la-ellipsis-v e_card_menu_1" id="btnSearchDrop1" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false"></i>
+
+                <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right" style="width: 190px;">
+                  <a href="#" class="dropdown-item"><i class="la la-map-pin"></i> Pin</a>
+                  <a href="#" class="dropdown-item"><i class="la la-edit"></i> Edit </a>
+                  <a href="#" class="dropdown-item"><i class="la la-book"></i> View CV </a>
+                  <a href="#" class="dropdown-item"><i class="la la-download"></i> Download CV </a>
+                  <a href="#" class="dropdown-item"><i class="la la-calendar"></i> Schedule Interview</a>
+                  <a href="#" class="dropdown-item"><i class="la la-times"></i>Reject</a>
+                </span>
+              </div>
+
+              <div class="e_card">
+                <div class="additional">
+                  <div class="user-card">
+
+                    <div class="level center">
+                      Level 1
+                    </div>
+                    <div class="points center">
+                      In-progress
+                    </div>
+                    <img src="app-assets/images/avatar/1.jpg" width="70" height="70" class="center ava-img">
+
+                  </div>
+                  <div class="more-info">
+                    <h1>Omar Huang</h1>
+                    <div class="coords">
+                      <span>IDS</span>
+                      <span>Applied 03 January 2019</span>
+                    </div>
+                    <div class="coords">
+                      <span>Web Developer</span>
+                      <span>Beirut, Lebanon</span>
+                    </div>
+                    <div class="stats">
+                      <div>
+                        <div class="title">Age</div>
+                        <i class="fa fa-gamepad"></i>
+                        <div class="value">34</div>
+                      </div>
+                      <div>
+                        <div class="title">Exp. years</div>
+                        <i class="fa fa-trophy"></i>
+                        <div class="value">12</div>
+                      </div>
+                      <div>
+                        <div class="title">Interviews</div>
+                        <i class="fa fa-group"></i>
+                        <div class="value">2</div>
+                      </div>
+                      <div>
+                        <div class="title">Skills</div>
+                        <i class="fa fa-coffee"></i>
+                        <div class="value ">15</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="general">
+                  <h1>Omar Huang</h1>
+                  <div class="matching">Matching <span class="info">91%</span></div>
+                  <div class="insights">
+                    <div> <span class="">.NET Core </span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 91%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="insights mt-1">
+                    <div> <span class="">Javascript</span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 81%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="insights mt-1">
+                    <div> <span class="">Html</span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 94%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- / CARD -->
+
+           <!-- CARD -->
+           <div class="e_card_box">
+
+            <div class="cc">
+              <div class="dropdown">
+                <i class="la la-ellipsis-v e_card_menu_1" id="btnSearchDrop1" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false"></i>
+
+                <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right" style="width: 190px;">
+                  <a href="#" class="dropdown-item"><i class="la la-map-pin"></i> Pin</a>
+                  <a href="#" class="dropdown-item"><i class="la la-edit"></i> Edit </a>
+                  <a href="#" class="dropdown-item"><i class="la la-book"></i> View CV </a>
+                  <a href="#" class="dropdown-item"><i class="la la-download"></i> Download CV </a>
+                  <a href="#" class="dropdown-item"><i class="la la-calendar"></i> Schedule Interview</a>
+                  <a href="#" class="dropdown-item"><i class="la la-times"></i>Reject</a>
+                </span>
+              </div>
+
+              <div class="e_card">
+                <div class="additional">
+                  <div class="user-card">
+
+                    <div class="level center">
+                      Level 1
+                    </div>
+                    <div class="points center">
+                      In-progress
+                    </div>
+                    <img src="app-assets/images/avatar/5.jpg" width="70" height="70" class="center ava-img">
+
+                  </div>
+                  <div class="more-info">
+                    <h1>Georga Field</h1>
+                    <div class="coords">
+                      <span>Edengate</span>
+                      <span>Applied 05 January 2019</span>
+                    </div>
+                    <div class="coords">
+                      <span>Junior Developer</span>
+                      <span>Junieh, Lebanon</span>
+                    </div>
+                    <div class="stats">
+                      <div>
+                        <div class="title">Age</div>
+                        <i class="fa fa-gamepad"></i>
+                        <div class="value">24</div>
+                      </div>
+                      <div>
+                        <div class="title">Exp. years</div>
+                        <i class="fa fa-trophy"></i>
+                        <div class="value">2</div>
+                      </div>
+                      <div>
+                        <div class="title">Interviews</div>
+                        <i class="fa fa-group"></i>
+                        <div class="value">3</div>
+                      </div>
+                      <div>
+                        <div class="title">Skills</div>
+                        <i class="fa fa-coffee"></i>
+                        <div class="value ">4</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="general">
+                  <h1>Georga Field</h1>
+                  <div class="matching">Matching <span class="info">85%</span></div>
+                  <div class="insights">
+                    <div> <span class="">.NET Core </span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 71%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="insights mt-1">
+                    <div> <span class="">Javascript</span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 73%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="insights mt-1">
+                    <div> <span class="">Html</span></div>
+                    <div class="mb-0 progress progress-sm">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 94%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- / CARD -->
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+      <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://intalio.com"
+          target="_blank">Intalio </a>, All rights reserved. </span>
+      <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Intalio <i class="ft-heart pink"></i></span>
+    </p>
+  </footer>
+  <!-- BEGIN VENDOR JS-->
+  <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <!-- BEGIN VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <script src="app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+  <script src="app-assets/vendors/js/charts/echarts/echarts.js" type="text/javascript"></script>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN MODERN JS-->
+  <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
+  <script src="app-assets/js/core/app.js" type="text/javascript"></script>
+  <script src="app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+  <!-- END MODERN JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  <script src="app-assets/js/scripts/pages/dashboard-crypto.js" type="text/javascript"></script>
+  <!-- END PAGE LEVEL JS-->
+
+  <script>
+
+
+    var app = angular.module("app", []);
+    app.controller("ctrl", function ($scope) { 
+
+
+    });
+
+  </script>
+
+</body>
+
+</html>

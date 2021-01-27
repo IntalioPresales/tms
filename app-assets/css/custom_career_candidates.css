@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+html,
+body {
+    background: #FCEEB5;
+    font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.matching{
+    text-align: center;
+    width: 100%;
+    margin-top: -8px;
+    font-size: 14px;
+}
+
+.matching span{
+    font-weight: 600;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.e_card_menu_1 {
+    z-index: 99;
+    position: absolute;
+    top: 18px;
+    left: 7px;
+    cursor: pointer;
+}
+#btnSearchDrop1{
+    color: #fff;
+}
+
+.e_card_menu {
+    top: 3%;
+    left: -2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.125rem 0.75rem;
+    border-radius: 100px;
+    white-space: nowrap;
+    font-size: 24px;
+    position: absolute;
+}
+
+.ava-img {
+    border-radius: 70px;
+}
+
+.e_card {
+    /* width: 450px; */
+    width: 350px;
+    /* height: 200px; */
+    height: 180px;
+    background-color: #fff;
+    background: linear-gradient(#f8f8f8, #fff);
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+}
+
+.e_card h1 {
+    text-align: center;
+}
+
+.e_card .additional {
+    position: absolute;
+    /* width: 150px; */
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(#dE685E, #EE786E);
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.e_card.green .additional {
+    background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.e_card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.e_card .additional .user-card {
+    /* width: 150px; */
+    width: 100px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.e_card .additional .user-card::after {
+    /* content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025); */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border: none;
+    border-style: none;
+    border-width: 2px;
+    border-left: 1px solid rgb(8 8 8 / 0%);
+    border-style: dashed;
+    border-color: #b95b536e;
+}
+
+.e_card .additional .user-card .level,
+.e_card .additional .user-card .points {
+    top: 15%;
+    color: #fff;
+    text-transform: uppercase;
+    /* font-size: 0.75em; */
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0.125rem 0.75rem;
+    border-radius: 100px;
+    white-space: nowrap;
+    font-size: 0.95em;
+}
+
+.e_card .additional .user-card .points {
+    top: 85%;
+}
+
+.e_card .additional .user-card svg {
+    top: 50%;
+}
+
+.e_card .additional .more-info {
+    /* width: 300px; */
+    width: 250px;
+    float: left;
+    position: absolute;
+    left: 100px;
+    height: 100%;
+}
+
+.e_card .additional .more-info h1 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.e_card.green .additional .more-info h1 {
+    color: #224C36;
+}
+
+.e_card .additional .coords {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.e_card.green .additional .coords {
+    color: #325C46;
+}
+
+.e_card .additional .coords span+span {
+    float: right;
+}
+
+.e_card .additional .stats {
+    font-size: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    color: #fff;
+}
+
+.e_card.green .additional .stats {
+    color: #325C46;
+}
+
+.e_card .additional .stats>div {
+    flex: 1;
+    text-align: center;
+}
+
+.e_card .additional .stats i {
+    display: block;
+}
+
+.e_card .additional .stats div.title {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.e_card .additional .stats div.value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.e_card .additional .stats div.value.infinity {
+    font-size: 2.5rem;
+}
+
+.e_card .general {
+    /* width: 300px; */
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.e_card .general .more {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.9em;
+}

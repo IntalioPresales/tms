@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr" ng-app="app">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+  <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+  <meta name="author" content="PIXINVENT">
+  <title> talent Management System</title>
+  <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+  <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+    rel="stylesheet">
+  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+    rel="stylesheet">
+  <!-- BEGIN VENDOR CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.css">
+  <!-- END VENDOR CSS-->
+  <!-- BEGIN MODERN CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+  <!-- END MODERN CSS-->
+  <!-- BEGIN Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-overlay-menu.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/cryptocoins/cryptocoins.css">
+  <!-- END Page Level CSS-->
+
+  <link rel="stylesheet" type="text/css" href="app-assets/css/custom.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <style>
+    .avatar {
+      width: 38px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body ng-controller="ctrl" class="vertical-layout vertical-overlay-menu 2-columns   menu-expanded fixed-navbar"
+  data-open="click" data-menu="vertical-overlay-menu" data-col="2-columns">
+
+  <!-- fixed-top-->
+
+  <!-- Main navbar -->
+  <div ng-include="'./components/header.html'"></div>
+  <!-- /Main navbar -->
+
+
+  <!-- Main navbar -->
+  <div ng-include="'./components/menu.html'"></div>
+  <!-- /Main navbar -->
+
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+  <div class="app-content content">
+    <div class="content-wrapper">
+
+      <!-- BREADCRUMB -->
+      <div class="content-header row">
+        <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+          <h3 class="content-header-title mb-0 d-inline-block">Terminations</h3>
+          <div class="row breadcrumbs-top d-inline-block">
+            <div class="breadcrumb-wrapper col-12">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">List </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="content-header-right col-md-6 col-12">
+          <div class="btn-group float-md-right">
+            <button class="btn btn-info dropdown-toggle mb-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+            <div class="dropdown-menu arrow"><a class="dropdown-item" href="#"><i class="fa fa-calendar-check mr-1"></i> Calender</a><a class="dropdown-item" href="#"><i class="fa fa-cart-plus mr-1"></i> Cart</a><a class="dropdown-item" href="#"><i class="fa fa-life-ring mr-1"></i> Support</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-cog mr-1"></i> Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / BREADCRUMB -->
+
+      <div class="content-body">
+
+        <section class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Terminations List</h4>
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                <div class="heading-elements">
+                  <button class="btn btn-primary btn-sm"><i class="ft-plus white"></i> New Termination</button>
+                  <span class="dropdown">
+                    <button id="btnSearchDrop1" type="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false" class="btn btn-warning btn-sm dropdown-toggle dropdown-menu-right"><i class="ft-download white"></i></button>
+                    <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right">
+                      <a href="#" class="dropdown-item"><i class="la la-calendar"></i> Due Date</a>
+                      <a href="#" class="dropdown-item"><i class="la la-random"></i> Priority </a>
+                      <a href="#" class="dropdown-item"><i class="la la-bar-chart"></i> Progress</a>
+                      <a href="#" class="dropdown-item"><i class="la la-user"></i> Assign to</a>
+                    </span>
+                  </span>
+                  <button class="btn btn-success btn-sm"><i class="ft-settings white"></i></button>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-body">
+                  <!-- Task List table -->
+                  <div class="table-responsive">
+
+                    <table id="project-task-list" class="table table-white-space table-bordered row-grouping display no-wrap icheck table-middle">
+                      <thead>
+                        <tr>
+                          <th>
+                            <input type="checkbox" class="input-chk">
+                          </th>
+                          <th>Terminated Employee</th>
+                          <th>Department</th>
+                          <th>Termination Type</th>
+                          <th>Termination Date</th>
+                          <th>Reason</th>
+                          <th>Notice Date</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+                          <td>
+                            <div style="display: flex; align-items: center;">
+
+                              <span class="avatar avatar-busy">
+                                <img src="app-assets/images/portrait/small/avatar-s-16.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="" data-original-title="John Doe">
+                              </span>
+
+                              <div>
+                                <a href="#" class="text-bold-600">Bronwyn Norris</a>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td>
+                            <h6 class="mb-0">
+                              <span class="text-bold-600 text-muted"> Product Department</span>
+                            </h6>
+                          </td>
+                          <td>
+                            Misconduct
+                          </td>
+                          <td>
+                            28 Feb 2019
+                          </td>
+                          <td class="text-center">
+                            Lorem Ipsum Dollar
+                          </td>
+                          <td class="text-center">
+                            28 Feb 2019
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+                                <a href="#" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                <a href="#" class="dropdown-item"><i class="ft-edit-2"></i> Edit </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="ft-trash"></i> Delete </a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+                          <td>
+                            <div style="display: flex; align-items: center;">
+
+                              <span class="avatar avatar-busy">
+                                <img src="app-assets/images/portrait/small/avatar-s-17.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="" data-original-title="John Doe">
+                              </span>
+
+                              <div>
+                                <a href="#" class="text-bold-600">Areeba Spence</a>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td>
+                            <h6 class="mb-0">
+                              <span class="text-bold-600 text-muted"> Finance Department</span>
+                            </h6>
+                          </td>
+                          <td>
+                            Misconduct
+                          </td>
+                          <td>
+                            28 Feb 2020
+                          </td>
+                          <td class="text-center">
+                            Lorem Ipsum Dollar
+                          </td>
+                          <td class="text-center">
+                            28 Feb 2020
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+                                <a href="#" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                <a href="#" class="dropdown-item"><i class="ft-edit-2"></i> Edit </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="ft-trash"></i> Delete </a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+                          <td>
+                            <div style="display: flex; align-items: center;">
+
+                              <span class="avatar avatar-busy">
+                                <img src="app-assets/images/portrait/small/avatar-s-11.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="" data-original-title="John Doe">
+                              </span>
+
+                              <div>
+                                <a href="#" class="text-bold-600">Ahsan Cassidy</a>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td>
+                            <h6 class="mb-0">
+                              <span class="text-bold-600 text-muted"> Sales Department</span>
+                            </h6>
+                          </td>
+                          <td>
+                            Misconduct
+                          </td>
+                          <td>
+                            21 Jul 2020
+                          </td>
+                          <td class="text-center">
+                            Lorem Ipsum Dollar
+                          </td>
+                          <td class="text-center">
+                            21 Jul 2020
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+                                <a href="#" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                <a href="#" class="dropdown-item"><i class="ft-edit-2"></i> Edit </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="ft-trash"></i> Delete </a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                      <!-- <tfoot>
+                        <tr>
+                          <th>
+                            <input type="checkbox" class="input-chk">
+                          </th>
+                          <th>Promoted Employee</th>
+                          <th>Department</th>
+                          <th>Designation From</th>
+                          <th>Designation To</th>
+                          <th>Promotion Date</th>
+                          <th>Actions</th>
+                        </tr>
+                      </tfoot> -->
+                    </table>
+                  </div>
+                  <!--/ Task List table -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+      <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://intalio.com"
+          target="_blank">Intalio </a>, All rights reserved. </span>
+      <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Intalio <i class="ft-heart pink"></i></span>
+    </p>
+  </footer>
+  <!-- BEGIN VENDOR JS-->
+  <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <!-- BEGIN VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <script src="app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+  <script src="app-assets/vendors/js/charts/echarts/echarts.js" type="text/javascript"></script>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN MODERN JS-->
+  <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
+  <script src="app-assets/js/core/app.js" type="text/javascript"></script>
+  <script src="app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+  <!-- END MODERN JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  <script src="app-assets/js/scripts/pages/dashboard-crypto.js" type="text/javascript"></script>
+  <!-- END PAGE LEVEL JS-->
+
+  <script>
+
+
+    var app = angular.module("app", []);
+    app.controller("ctrl", function ($scope) { });
+
+  </script>
+
+</body>
+
+</html>

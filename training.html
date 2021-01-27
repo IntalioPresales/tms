@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr" ng-app="app">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+  <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+  <meta name="author" content="PIXINVENT">
+  <title> talent Management System</title>
+  <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+  <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+    rel="stylesheet">
+  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+    rel="stylesheet">
+  <!-- BEGIN VENDOR CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.css">
+  <!-- END VENDOR CSS-->
+  <!-- BEGIN MODERN CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+  <!-- END MODERN CSS-->
+  <!-- BEGIN Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-overlay-menu.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/cryptocoins/cryptocoins.css">
+  <!-- END Page Level CSS-->
+
+  <link rel="stylesheet" type="text/css" href="app-assets/css/custom.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body ng-controller="ctrl" class="vertical-layout vertical-overlay-menu 2-columns   menu-expanded fixed-navbar"
+  data-open="click" data-menu="vertical-overlay-menu" data-col="2-columns">
+
+  <!-- fixed-top-->
+
+  <!-- Main navbar -->
+  <div ng-include="'./components/header.html'"></div>
+  <!-- /Main navbar -->
+
+
+  <!-- Main navbar -->
+  <div ng-include="'./components/menu.html'"></div>
+  <!-- /Main navbar -->
+
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+  <div class="app-content content">
+    <div class="content-wrapper">
+
+      <!-- BREADCRUMB -->
+      <div class="content-header row">
+        <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+          <h3 class="content-header-title mb-0 d-inline-block">Training</h3>
+          <div class="row breadcrumbs-top d-inline-block">
+            <div class="breadcrumb-wrapper col-12">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">List </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="content-header-right col-md-6 col-12">
+          <div class="btn-group float-md-right">
+            <button class="btn btn-info dropdown-toggle mb-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+            <div class="dropdown-menu arrow"><a class="dropdown-item" href="#"><i class="fa fa-calendar-check mr-1"></i> Calender</a><a class="dropdown-item" href="#"><i class="fa fa-cart-plus mr-1"></i> Cart</a><a class="dropdown-item" href="#"><i class="fa fa-life-ring mr-1"></i> Support</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-cog mr-1"></i> Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / BREADCRUMB -->
+
+      <div class="content-body">
+
+        <div class="users-list-filter px-1">
+          <form>
+            <div class="row border border-light rounded py-2 mb-2">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="form-group validate">
+                  <div class="controls">
+                    <label>Training Type</label>
+                    <input type="text" class="form-control" placeholder="Training Type">
+                    <div class="help-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <label for="users-list-role">Technical Tags</label>
+                <fieldset class="form-group">
+                  <select class="form-control" id="users-list-role">
+                    <option value="">Any</option>
+                    <option value="User">Git</option>
+                    <option value="User">Java</option>
+                    <option value="Staff">.NET</option>
+                    <option value="Staff">PHP</option>
+                    <option value="Staff">AWS</option>
+                    <option value="Staff">MVC</option>
+                    <option value="Staff">Blade</option>
+                    <option value="Staff">Mysql</option>
+                    <option value="Staff">Html5</option>
+                    <option value="Staff">Css3</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <label for="users-list-status">Trainer</label>
+                <fieldset class="form-group">
+                  <select class="form-control" id="users-list-status">
+                    <option value="">Any</option>
+                    <option value="Active">Brook Fletcher</option>
+                    <option value="Close">Nikodem Dickerson </option>
+                    <option value="Banned">Ramone Blanchard</option>
+                    <option value="Banned">Inigo Boyle</option>
+                    <option value="Banned">Nathalie Hayward</option>
+                    <option value="Banned">Grayson John</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center">
+                <button class="btn btn-block btn-primary glow">Filter</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <section class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Training List</h4>
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                <div class="heading-elements">
+                  <button class="btn btn-primary btn-sm"><i class="ft-plus white"></i> New Training</button>
+                  <span class="dropdown">
+                    <button id="btnSearchDrop1" type="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false" class="btn btn-warning btn-sm dropdown-toggle dropdown-menu-right"><i class="ft-download white"></i></button>
+                    <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right">
+                      <a href="#" class="dropdown-item"><i class="la la-calendar"></i> Due Date</a>
+                      <a href="#" class="dropdown-item"><i class="la la-random"></i> Priority </a>
+                      <a href="#" class="dropdown-item"><i class="la la-bar-chart"></i> Progress</a>
+                      <a href="#" class="dropdown-item"><i class="la la-user"></i> Assign to</a>
+                    </span>
+                  </span>
+                  <button class="btn btn-success btn-sm"><i class="ft-settings white"></i></button>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-body">
+                  <!-- Task List table -->
+                  <div class="table-responsive">
+
+                    <table id="project-task-list" class="table table-white-space table-bordered row-grouping display no-wrap icheck table-middle">
+                      <thead>
+                        <tr>
+                          <th>
+                            <input type="checkbox" class="input-chk">
+                          </th>
+                          <th>Training Type</th>
+                          <th>Trainer</th>
+                          <th>Employee</th>
+                          <th>Duration</th>
+                          <th>Description</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+                          <td>
+                            Git Training
+                          </td>
+                          <td>
+                            <div style="display: flex; align-items: center;">
+
+                              <span class="avatar avatar-busy mr-1">
+                                <img src="app-assets/images/portrait/small/avatar-s-3.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="" data-original-title="John Doe">
+                              </span>
+                              <div>
+                                <a href="#" class="text-bold-600">Mike Litorus</a>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td>
+                            <ul class="list-unstyled users-list m-0">
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-4.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-5.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-6.png" alt="Avatar">
+                              </li>
+                              <li class="avatar avatar-sm">
+                                <span class="badge badge-info">+8 more</span>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            7 May 2019 - 10 May 2019
+                          </td>
+                          <td>
+                            Lorem ipsum dollar
+                          </td>
+                          <td class="text-center">
+                            <button type="button" class="btn btn-sm btn-outline-blue-grey round" style="display: flex;align-items: center;font-weight: 600;">
+                              <i class="la la-circle text-danger" style="margin-right: 5px;"></i>
+                              Inactive
+                            </button>
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+                                <a href="#" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                <a href="#" class="dropdown-item"><i class="ft-edit-2"></i> Edit </a>
+                                <a href="#" class="dropdown-item"><i class="ft-check"></i> Complete</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="ft-trash"></i> Delete </a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+                          <td>
+                            Swift Training
+                          </td>
+                          <td>
+                            <div style="display: flex; align-items: center;">
+
+                              <span class="avatar avatar-busy mr-1">
+                                <img src="app-assets/images/portrait/small/avatar-s-4.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="" data-original-title="John Doe">
+                              </span>
+                              <div>
+                                <a href="#" class="text-bold-600">Richard Miles</a>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td>
+                            <ul class="list-unstyled users-list m-0">
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-1.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-2.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-9.png" alt="Avatar">
+                              </li>
+                              <li class="avatar avatar-sm">
+                                <span class="badge badge-info">+14 more</span>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            7 Jun 2020 - 10 Jun 2020
+                          </td>
+                          <td>
+                            Lorem ipsum dollar
+                          </td>
+                          <td class="text-center">
+                            <button type="button" class="btn btn-sm btn-outline-blue-grey round" style="display: flex;align-items: center;font-weight: 600;">
+                              <i class="la la-circle text-success" style="margin-right: 5px;"></i>
+                              Active
+                            </button>
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+                                <a href="#" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                <a href="#" class="dropdown-item"><i class="ft-edit-2"></i> Edit </a>
+                                <a href="#" class="dropdown-item"><i class="ft-check"></i> Complete</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="ft-trash"></i> Delete </a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+                          <td>
+                            Node Training
+                          </td>
+                          <td>
+                            <div style="display: flex; align-items: center;">
+
+                              <span class="avatar avatar-busy mr-1">
+                                <img src="app-assets/images/portrait/small/avatar-s-14.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="" data-original-title="John Doe">
+                              </span>
+                              <div>
+                                <a href="#" class="text-bold-600">Mike Litorus </a>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td>
+                            <ul class="list-unstyled users-list m-0">
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-11.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-12.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-19.png" alt="Avatar">
+                              </li>
+                              <li class="avatar avatar-sm">
+                                <span class="badge badge-info">+24 more</span>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            1 Mar 2020 - 5 Mar 2020
+                          </td>
+                          <td>
+                            Lorem ipsum dollar
+                          </td>
+                          <td class="text-center">
+                            <button type="button" class="btn btn-sm btn-outline-blue-grey round" style="display: flex;align-items: center;font-weight: 600;">
+                              <i class="la la-circle text-success" style="margin-right: 5px;"></i>
+                              Active
+                            </button>
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+                                <a href="#" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                <a href="#" class="dropdown-item"><i class="ft-edit-2"></i> Edit </a>
+                                <a href="#" class="dropdown-item"><i class="ft-check"></i> Complete</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="ft-trash"></i> Delete </a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="input-chk">
+                          </td>
+                          <td>
+                            Angular Training
+                          </td>
+                          <td>
+                            <div style="display: flex; align-items: center;">
+
+                              <span class="avatar avatar-busy mr-1">
+                                <img src="app-assets/images/portrait/small/avatar-s-16.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="" data-original-title="John Doe">
+                              </span>
+                              <div>
+                                <a href="#" class="text-bold-600">Wilmer Deluna  </a>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td>
+                            <ul class="list-unstyled users-list m-0">
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-17.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-18.png" alt="Avatar">
+                              </li>
+                              <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones" class="avatar avatar-sm pull-up">
+                                <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-20.png" alt="Avatar">
+                              </li>
+                              <li class="avatar avatar-sm">
+                                <span class="badge badge-info">+14 more</span>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            7 Dec 2020 - 12 Dec 2020
+                          </td>
+                          <td>
+                            Lorem ipsum dollar
+                          </td>
+                          <td class="text-center">
+                            <button type="button" class="btn btn-sm btn-outline-blue-grey round" style="display: flex;align-items: center;font-weight: 600;">
+                              <i class="la la-circle text-success" style="margin-right: 5px;"></i>
+                              Active
+                            </button>
+                          </td>
+                          <td>
+                            <span class="dropdown">
+                              <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="btn btn-info dropdown-toggle"><i class="la la-cog"></i></button>
+                              <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+                                <a href="#" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                <a href="#" class="dropdown-item"><i class="ft-edit-2"></i> Edit </a>
+                                <a href="#" class="dropdown-item"><i class="ft-check"></i> Complete</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="ft-trash"></i> Delete </a>
+                              </span>
+                            </span>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>
+                            <input type="checkbox" class="input-chk">
+                          </th>
+                          <th>Training Type</th>
+                          <th>Trainer</th>
+                          <th>Employee</th>
+                          <th>Duration</th>
+                          <th>Description</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <!--/ Task List table -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+      <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://intalio.com"
+          target="_blank">Intalio </a>, All rights reserved. </span>
+      <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Intalio <i class="ft-heart pink"></i></span>
+    </p>
+  </footer>
+  <!-- BEGIN VENDOR JS-->
+  <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <!-- BEGIN VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <script src="app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+  <script src="app-assets/vendors/js/charts/echarts/echarts.js" type="text/javascript"></script>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN MODERN JS-->
+  <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
+  <script src="app-assets/js/core/app.js" type="text/javascript"></script>
+  <script src="app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+  <!-- END MODERN JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  <script src="app-assets/js/scripts/pages/dashboard-crypto.js" type="text/javascript"></script>
+  <!-- END PAGE LEVEL JS-->
+
+  <script>
+
+
+    var app = angular.module("app", []);
+    app.controller("ctrl", function ($scope) { });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+#chart-container {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 24px);
+    border: 2px dashed #aaa;
+    border-radius: 0px;
+    overflow: auto;
+    text-align: center;
+}
+
+.orgchart .node .stats {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 4px;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.orgchart .node .stats div {
+    font-size: 12px;
+    font-weight: 600;
+    color: #556166;
+    display: flex;
+    align-items: center;
+}
+
+.orgchart .node .stats div:last-child i {
+    color: #dca883;
+}
+
+.orgchart .node .stats i {
+    color: #8a8f92;
+    font-size: 16px !important;
+    font-weight: 500;
+}
+
+.orgchart .node .details {
+    padding-left: 5px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.orgchart .node .img {
+    height: 75px;
+}
+
+.orgchart .node .name {
+    font-weight: 600;
+    color: #222222;
+    margin-top: 4px;
+    text-transform: capitalize;
+}
+
+.orgchart .node .position {
+    text-align: left;
+    margin-top: 3px;
+    color: #969696;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.orgchart .node .title {
+    font-size: 12px !important;
+}
+
+.orgchart .node:hover {
+    background-color: unset;
+}
+
+.orgchart .vacancy {
+    border: 1px solid #f8a1a1 !important;
+}
+
+.orgchart .color-vacancy {
+    color: #f8a1a1 !important;
+}
+
+.orgchart .node {
+    width: 250px;
+    border: 1px solid #ddd;
+    /* box-shadow: 0px 1px 9px #cbcbcb; */
+    padding: 0;
+    border: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    /* border-left: 3px solid #f65f5f; */
+}
+
+.orgchart .custom_node {
+    border: 1px solid #ddd;
+    /* box-shadow: 0px 1px 9px #cbcbcb; */
+    padding: 0;
+    border: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-left: 3px solid #f65f5f;
+}
+
+.orgchart .node .title {
+    width: unset;
+    height: unset;
+    padding: 8px 12px;
+    background-color: #d3d3d3 !important;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px !important;
+    color: #000;
+}
+
+.orgchart .oci {
+    display: none;
+}
+
+.orgchart .node .content {
+    border: none;
+    font-size: 13px;
+    height: 100%;
+    min-height: 20px;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /* background: #d6e7fb; */
+    color: #1f1e1e;
+    cursor: pointer;
+}
+
+.orgchart .node .note {
+    min-height: 20px;
+    background-color: #fff;
+    font-size: 13px;
+    padding: 3px 0px;
+}
+
+.orgchart {
+    background-image: none;
+}
+
+.orgchart .box {
+    background: #fff;
+    /* padding: 3px; */
+    /* padding-left: 5px; */
+    border: 1px solid #ccc;
+    margin-top: 7px;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+.orgchart .box .text {
+    font-size: 12px;
+    padding-left: 10px;
+    color: #373737;
+    font-weight: 600;
+}
+
+.orgchart .box i {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.opening_period {
+    width: 30px;
+    color: #fff !important;
+    text-align: center;
+    font-size: 14px;
+    height: 100%;
+}
+
+.opening_period.warning {
+    background-color: #dca883;
+}
+
+.opening_period.normal {
+    background-color: #0080bf;
+}
+
+.opening_period.danger {
+    background-color: #fb6161;
+}
+
+.leaving_in {
+    margin-left: auto;
+    margin-top: auto;
+    background: #d8d7d7;
+    padding: 1px 7px;
+    font-size: 12px;
+}
